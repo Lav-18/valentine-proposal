@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Letter For You 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<audio id="bgMusic" src="assets/music.mp3" loop></audio>
+<button id="musicBtn">🔊</button>
+  <!-- HEART RAIN (background) -->
+  <!-- hearts will be injected by hearts.js -->
+
+  <!-- LETTER CONTAINER -->
+  <div class="letter">
+
+    <!-- TYPING TEXT -->
+    <p id="typing"></p>
+
+    <!-- YES / NO BUTTONS -->
+    <div class="buttons">
+      <button id="yes">YES 💕</button>
+      <button id="no">NO 🙈</button>
+    </div>
+
+    <!-- FINAL MESSAGE -->
+    <h2 id="finalMsg"></h2>
+
+  </div>
+
+  <!-- JS FILES (ORDER MATTERS) -->
+  <script src="js/typing.js"></script>
+  <script src="js/hearts.js"></script>
+  <script src="js/proposal.js"></script>
+<script src="js/music.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+body {
+background: linear-gradient(120deg, #ffd6e8, #e6f7ff);
+font-family: 'Poppins', sans-serif;
+text-align: center;
+}
+
+
+.btn {
+padding: 15px 30px;
+background: #ff5c8a;
+color: white;
+border-radius: 30px;
+text-decoration: none;
+}
+
+
+.gallery img {
+width: 220px;
+border-radius: 20px;
+margin: 10px;
+}
+
+
+.fade {
+animation: fadeIn 2s;
+}
+
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px;
+}
+
+.album-img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+.nav-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.camera {
+  position: relative;
+  width: 360px;
+  margin: 30px auto;
+  background: #222;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.camera video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+.heart {
+  position: fixed;
+  top: -20px;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.letter {
+  background: white;
+  width: 80%;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+#no {
+  background: #ccc;
+}
+
+#finalMsg {
+  margin-top: 25px;
+  font-size: 1.6rem;
+  color: #ff4d6d;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#typing {
+  font-size: 1.25rem;        /* BIGGER text */
+  line-height: 1.9;          /* breathing space */
+  color: #444;
+  text-align: left;          /* reads like a real letter */
+  white-space: normal;
+  font-family: 'Poppins', sans-serif;
+}
+#typing {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Make letter box feel grand */
+.letter {
+  background: white;
+  width: 85%;
+  max-width: 700px;          /* wider letter */
+  margin: 60px auto;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+#finalMsg {
+  margin-top: 35px;
+  font-size: 1.8rem;
+  font-family: 'Pacifico', cursive;
+  color: #ff4d6d;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s ease;
+}
+
+#finalMsg.show {
+  opacity: 1;
+  transform: scale(1);
+}
+.camera {
+  position: relative;
+  width: 360px;
+  margin: 30px auto;
+  background: #222;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.camera video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Video control buttons */
+.video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  background: rgba(255,255,255,0.85);
+  border: none;
+  border-radius: 50%;
+  padding: 12px 18px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide pause button initially */
+#pauseBtn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hide buttons when video is playing */
+.camera.playing .video-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Show pause button on hover when playing */
+.camera.playing:hover #pauseBtn {
+  opacity: 1;
+  pointer-events: auto;
+}

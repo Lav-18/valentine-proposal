@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Memories 💞</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Font (optional but pretty) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- BACKGROUND MUSIC (continues across pages) -->
+  <audio id="bgMusic" src="assets/music.mp3" loop></audio>
+  <button id="musicBtn">🔊</button>
+
+  <!-- PAGE TITLE -->
+  <h1 class="section-title">Our Little Album 📸</h1>
+
+  <!-- IMAGE ALBUM / SLIDER -->
+  <div class="album">
+
+    <button class="nav-btn" onclick="prevImage()">⟵</button>
+
+    <img
+      id="albumImage"
+      class="album-img"
+      src="assets/images/1.jpg"
+      alt="Our memory"
+    >
+
+    <button class="nav-btn" onclick="nextImage()">⟶</button>
+
+  </div>
+
+  <!-- IMAGE COUNTER -->
+  <p id="imageCounter"></p>
+
+  <!-- VIDEO SECTION -->
+  <h2 class="section-title">Captured on My Heart 🎥</h2>
+
+  <div class="camera">
+
+    <video
+      id="memoryVideo"
+      src="assets/video.mp4"
+      preload="metadata"
+    ></video>
+
+    <!-- Custom video controls -->
+    <button
+      id="playBtn"
+      class="video-btn"
+      onclick="playVideo()"
+      aria-label="Play video"
+    >▶</button>
+
+    <button
+      id="pauseBtn"
+      class="video-btn"
+      onclick="pauseVideo()"
+      aria-label="Pause video"
+    >⏸</button>
+
+  </div>
+
+  <!-- NEXT PAGE -->
+  <a href="letter.html" class="btn">One Last Thing 💌</a>
+
+  <!-- JAVASCRIPT (ORDER MATTERS) -->
+  <script src="js/music.js"></script>
+  <script src="js/album.js"></script>
+
+</body>
+</html>
